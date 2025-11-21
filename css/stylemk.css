@@ -860,13 +860,6 @@ box-shadow: 0 164px 46px 0 rgba(25, 130, 210, 0.01), 0 105px 42px 0 rgba(25, 130
     .sec6-grid {
         width: 60%;
     }
-}
-
-@media (max-width: 575.98px) {
-    .cm-sec6 {
-        /* min-height: 64vh; */
-    }
-
     .sec6-grid {
         width: 70%;
     }
