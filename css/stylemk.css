@@ -1,6 +1,11 @@
 :root {
     --brand: #2290FF;
     --ink: #0e1522;
+    --overlay-color-1: rgba(0, 161, 224, 0.55); /* azul alpha */
+    --overlay-color-2: rgba(0, 0, 0, 0.55);     /* negro alpha */
+    --navbar-height: 56px;
+      --navbar-height: 56px;
+  --sticky-offset: 72px; /* distancia desde el top para el contenido fijo */
 }
 
 h1,h2,h3 {
@@ -1524,7 +1529,12 @@ align-self: stretch;
     transform: translateY(-2px);
     opacity: .85;
 }
-
+/* SECCION 10 */
+.cm-sec10 {
+    /* Gradiente lateral azul → blanco con velo superior muy leve (como la maqueta) */
+    color: #0e1522;
+    background: linear-gradient(180deg, rgba(28, 115, 184, 0.90) 20.67%, rgba(34, 144, 255, 0.00) 70.67%, rgba(17, 143, 255, 0.90) 88.46%, rgba(0, 142, 255, 0.90) 100%);
+}
 /* Responsivo */
 @media (max-width: 991.98px) {
     .cm-footnav {
@@ -1570,7 +1580,6 @@ align-self: stretch;
     opacity: .85;
 }
 
-/* Opcional: estiliza el icono hamburguesa si tu Bootstrap no carga el SVG por defecto */
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(14,21,34, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -1595,3 +1604,48 @@ align-self: stretch;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite; /* Se repite siempre */
 }
+
+
+.pt-nav {
+  padding-top: var(--navbar-height);
+}
+.parallax-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* parallax básico de respaldo */
+      overflow: hidden;
+    }
+
+    /* Capa oscura para mejorar legibilidad del texto */
+    .parallax-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .parallax-content {
+      position: relative;
+      z-index: 2;
+      will-change: transform;
+      transition: transform 0.1s linear;
+    }
+
+    .parallax-content h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .parallax-content p {
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      max-width: 640px;
+      margin: 0 auto;
+    }
