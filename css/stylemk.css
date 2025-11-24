@@ -4,8 +4,8 @@
     --overlay-color-1: rgba(0, 161, 224, 0.55); /* azul alpha */
     --overlay-color-2: rgba(0, 0, 0, 0.55);     /* negro alpha */
     --navbar-height: 56px;
-      --navbar-height: 56px;
-  --sticky-offset: 72px; /* distancia desde el top para el contenido fijo */
+    --buton-primary-b:rgba(0, 0, 0, 1);
+     --sticky-offset: 72px; /* distancia desde el top para el contenido fijo */
 }
 
 h1,h2,h3 {
@@ -201,6 +201,24 @@ h1.hero::before {
     }
 }
 
+
+/* BUTTONS */
+.btn-primary-mk {
+border: 1px solid #000;
+background: transparent;
+padding: 8px 32px; 
+color: black;
+/* width: 20vh; */
+}
+.btn-primary-mk:hover {
+border: 1px solid #000;
+background: #000;
+padding: 8px 32px; 
+color: white;
+}
+/* BUTTONS */
+
+
 /************ SECCIÓN 2 ************/
 .cm-sec2 {
     /* height: 80vh; */
@@ -331,8 +349,8 @@ background: linear-gradient(181deg, rgba(156, 187, 206, 0.30) -6.54%, rgba(255, 
     display: block;
     pointer-events: none;
     user-select: none;
-    filter:
-        drop-shadow(20px 20px 28px rgb(34 144 255 / 30%)) drop-shadow(20px 2px 18px rgb(34 144 255 / 35%)) drop-shadow(0 2px 8px rgb(34 144 255 / 35%));
+    /* filter:
+        drop-shadow(20px 20px 28px rgb(34 144 255 / 30%)) drop-shadow(20px 2px 18px rgb(34 144 255 / 35%)) drop-shadow(0 2px 8px rgb(34 144 255 / 35%)); */
 }
 
 /* Centro exacto sobre el anillo */
@@ -1401,9 +1419,10 @@ align-self: stretch;
 }
 
 .cm-faq .faq-sub {
-    display: block;
-    font-size: 0.98rem;
+display: block;
     opacity: .85;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .cm-faq .accordion-body {
@@ -1566,13 +1585,32 @@ align-self: stretch;
     border-left: 1px solid rgba(14, 21, 34, .08);
     box-shadow: -12px 0 40px rgba(0, 0, 0, .12);
 }
-
+.info-section-img {
+    background: #ffffff48;
+    padding: 100px 10px;
+    border-radius: 50px;
+    border:1px solid #ffffffad;
+    backdrop-filter: blur(4px);
+    width: 50vh;
+}
 /* Enlaces móvil */
 .cm-mobile-link {
     font-weight: 600;
     color: #0e1522;
     padding: .8rem 0;
     border-bottom: 1px solid rgba(14, 21, 34, .08);
+}
+h2.tittle-folio {
+    --g1: #0E1522;
+    --g2: #1E5AA8;
+    --g3: #2F7FD6;
+    font-family: "HK Guise";
+    background: linear-gradient(90deg, var(--g1) 0%, var(--g2) 55%, var(--g3) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 900; 
 }
 
 .cm-mobile-link:hover {
@@ -1621,6 +1659,7 @@ align-self: stretch;
       background-repeat: no-repeat;
       background-attachment: fixed; /* parallax básico de respaldo */
       overflow: hidden;
+
     }
 
     /* Capa oscura para mejorar legibilidad del texto */
