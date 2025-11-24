@@ -56,13 +56,13 @@ h1.hero {
     background-size: 200% auto;
     color: transparent;
     font-size: clamp(
-    3rem,                      /* ≈ 42–43px → similar a 11.9vw en 360px */
+    2.7rem,                      /* ≈ 42–43px → similar a 11.9vw en 360px */
     calc(4.5rem + 1vw),     /* tamaño fluido entre 360px y 1024px */
     5.9vw                        /* límite superior en pantallas grandes */
   );
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -6px;
+    letter-spacing: -3px;
 }
 
 h1.hero:hover {
